@@ -5,7 +5,7 @@ import styles from  './App.module.css'
 function App() {
 const todos = [{title: 'A'},
                {title: 'Б'},
-               {title: 'В', children: [ {title: 'A'}, {title: 'B'}, {title: 'C'}, {title: 'D'} ]}, 
+               {title: 'В', children: [ {title: 'A'}, {title: 'B'}, {title: 'C'}, {title: 'D'}, {title: 'E'}, {title: 'F'}, {title: 'G'}, {title: 'H'}, {title: 'I'} ]}, 
                {title: 'Г'},
                {title: 'Д'},
                {title: 'Е'},
