@@ -3,10 +3,41 @@ import styles from  './App.module.css'
 
 
 function App() {
-const todos = ['А', 'Б', 'С', 'Д', 'Е', 'Ё', 'Ж', 'З', 'И', 'К', 'Л', 'М', 'Н','О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ъ', 'Ы', 'Ь']
+const todos = [{title: 'A'},
+               {title: 'Б'},
+               {title: 'В', children: [ {title: 'A'}, {title: 'B'}, {title: 'C'}, {title: 'D'} ]}, 
+               {title: 'Г'},
+               {title: 'Д'},
+               {title: 'Е'},
+               {title: 'Ё'},
+               {title: 'Ж'},
+               {title: 'З'},
+               {title: 'И'},
+               {title: 'Й'},
+               {title: 'К'},
+               {title: 'Л'},
+               {title: 'М'},
+               {title: 'Н'},
+               {title: 'О'},
+               {title: 'П'},
+               {title: 'Р'},
+               {title: 'С'},
+               {title: 'Т'},
+               {title: 'У'},
+               {title: 'Ф'},
+               {title: 'Х'},
+               {title: 'Ц'},
+               {title: 'Ч'},
+               {title: 'Ш'},
+               {title: 'Щ'},
+               {title: 'Ъ'}]
 
-  return <div className = {styles.wr}><TodoList todos={todos}/></div>
-  // <TodoItem title='Мой заголовок'/>
+
+  return (
+      <div className = {styles.wr}>
+        <TodoList todos={todos}/>
+      </div>
+  );
 }
 
 export default App;
