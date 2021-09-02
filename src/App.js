@@ -34,7 +34,7 @@ const todos = [{title: 'A'},
 
 
   return (
-      <div className = {styles.wr}>
+      <div className = {styles.app}>
         <TodoList todos={todos}/>
       </div>
   );
