@@ -1,15 +1,12 @@
-
-
 .wrapper {
   display: flex;
   flex-wrap:wrap;
-  justify-content:space-between;
-  border: 5px solid #000000; 
-  padding: 16px;
+  border: 5px solid #000000;
+  padding: 4px;
   width: 240px;
-  height:460px;
-  align-items: center;
+  height: 460px;
   border-radius: 20px;
   background-image: url('../back.jpg');
   position: relative;
+  align-content: flex-start;
 }

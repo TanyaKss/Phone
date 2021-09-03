@@ -1,17 +1,46 @@
-  
 
 .item {
   border: 1px solid #000000;
   border-radius: 7px;
   width: 50px;
   height: 50px;
-  line-height: 50px;
   background-color: #FFFFFF;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   user-select: none;
   cursor: pointer;
+  margin: 2.5px;
+  transition: all linear 0.25s;
+
 }
 .title {
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   font-size: 35px;
+  transition: all linear 0.25s;
+}
+
+.mini {
+  width: 13px;
+  height: 13px;
+  line-height: 13px;
+  border-radius: 2px;
+  margin: 1px;
+}
+
+.mini .title {
+  font-size: 7px;
+}
+
+.shake {
+  animation: shake 0.2s;
+  animation-iteration-count:infinite;
+}
+
+@keyframes shake {
+  0%   {transform: rotate(0deg);}
+  25%  {transform: rotate(-2deg);}
+  50%  {transform: rotate(-4deg);}
+  75%  {transform: rotate(2deg);}
+  100% {transform: rotate(4deg);}
 }
