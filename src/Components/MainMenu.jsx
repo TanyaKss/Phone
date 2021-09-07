@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 import styles from './MainMenu.module.css'
 import TodoGrid from './TodoGrid';
 import DotsList from './DotsList';
@@ -12,13 +12,22 @@ const MainMenu = ({todos}) => {
     return acc;
   },new Set()))
 
-  const [openList, setOpenList] = useState(0);
+  const [pageIndex] = useState(1);
 
+  //формирование страницы относительно page
+  const [currentList, setCurrentList] = useState([]);
+
+  useEffect(() => {
+
+    setCurrentList(todos.filter((e)=>e.page===pageIndex))
+    
+  }, [pageIndex, todos]);
+ 
   return (
       <div className={styles.wrapper} ref={ref}>
-        <TodoGrid todos={todos} rootElement={ref} />
+        <TodoGrid rootElement={ref} currentList={currentList}/>
         <div className = {styles.dotsList}>
-          <DotsList pageCount={pageCount} openList={openList}/>
+          <DotsList pageCount={pageCount} pageIndex={pageIndex} />
         </div>
       </div>
   );

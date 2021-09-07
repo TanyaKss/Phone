@@ -29,7 +29,7 @@ const Folder = ({todos, modal, onClick, rootElement}) => {
             onClick={onClick}
             style={modal ? {marginLeft: ox + 'px', marginTop: oy + 'px'} : {}}
         >
-          <TodoGrid todos={todos} mini={!modal}/>
+          <TodoGrid currentList={todos} mini={!modal}/>
         </div>
       </div>
   );

@@ -2,30 +2,16 @@ import React from 'react';
 import Dots from './Dots';
 
 
-const DotsList = ({pageCount, openList, active}) => { 
+const DotsList = ({pageCount, pageIndex }) => { 
+
+
 
     return pageCount.map((e, i) => {
-      if (openList===i)
-        return <Dots
-                 key={i}
-                 active={true}/>
+      if (pageIndex===e)
+        return <Dots active={true}/>
       else
-        return <Dots 
-                 key={i}/>
+        return <Dots/>
     })
-  // if (e===openList) 
-  // return (
-  //   <div>
-  //     <Dots active={active}/>
-  //   </div> 
-  //   )
-  // else  (
-  //   <div>
-  //     <Dots/>
-  //   </div> 
-  //   )
-  //  }
-  //  )
 };
 
 export default DotsList;

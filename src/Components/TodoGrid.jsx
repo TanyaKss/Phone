@@ -4,7 +4,7 @@ import Folder from './Folder';
 
 
 
-const TodoGrid = ({todos, mini, rootElement}) => {
+const TodoGrid = ({mini, rootElement, currentList}) => {
 
   const [openIndex, setOpenIndex] = useState(-1);
 
@@ -12,7 +12,7 @@ const TodoGrid = ({todos, mini, rootElement}) => {
     setOpenIndex(i === openIndex ? -1 : i)
   }
 
-  return todos.map((e, i) => {
+  return currentList.map((e, i) => {
       if (e.children)
         return <Folder
             key={i}
