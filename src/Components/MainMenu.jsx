@@ -15,8 +15,8 @@ const MainMenu = ({todos}) => {
 
   const [pageIndex, setPageIndex] = useState(1);
 
-  function onPageChange(i) {
-    setPageIndex(i)
+  function onPageChange(e) {
+    setPageIndex(e)
   }
 
 

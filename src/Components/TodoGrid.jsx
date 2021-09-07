@@ -16,6 +16,7 @@ const TodoGrid = ({mini, rootElement, currentList}) => {
       if (e.children)
         return <Folder
             key={i}
+            title={e.title}
             todos={e.children}
             modal={openIndex === i}
             rootElement={rootElement}

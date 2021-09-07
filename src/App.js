@@ -5,7 +5,7 @@ import MainMenu from './Components/MainMenu';
 function App() {
   const todos = [{title: 'A', page: 1},
   {title: 'Б', page: 1},
-  {title: 'В', children: [ {title: 'A'}, {title: 'B'}, {title: 'C'}, {title: 'D'}, {title: 'E'}, {title: 'F'}, {title: 'G'}, {title: 'H'}, {title: 'I'} ], page: 1}, 
+  {title: 'В', children: [{title: 'A'}, {title: 'B'}, {title: 'C'},  {title: 'D'}, {title: 'E'}, {title: 'F'}, {title: 'G'}, {title: 'H'}, {title: 'I'} ], page: 1}, 
   {title: 'Г', page: 1},
   {title: 'Д', page: 1},
   {title: 'Е', page: 1},
