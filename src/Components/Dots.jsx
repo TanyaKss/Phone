@@ -1,11 +1,13 @@
 import React from 'react';
 import styles from './Dots.module.css'
+import cn from 'classnames'
 
-const Dots = ({}) => {
+// className={cn(styles.noActive, {[styles.active]: openList})}
+
+const Dots = ({active}) => {
   return (
-    <div className={styles.wrapper}>
-    <div  className={styles.active}/>
-    <div  className={styles.noActive}/> 
+    <div >
+      <div className={cn({[styles.active]: active}, {[styles.noActive]:!active})}/> 
     </div>
   )
 };

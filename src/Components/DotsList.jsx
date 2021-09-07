@@ -1,15 +1,31 @@
 import React from 'react';
 import Dots from './Dots';
-import styles from './DotsList.module.css'
 
 
+const DotsList = ({pageCount, openList, active}) => { 
 
-const DotsList = ({active}) => {
-  return (
-  <div className={styles.wrapperList}>
-    <Dots/>
-  </div>
-  )
+    return pageCount.map((e, i) => {
+      if (openList===i)
+        return <Dots
+                 key={i}
+                 active={true}/>
+      else
+        return <Dots 
+                 key={i}/>
+    })
+  // if (e===openList) 
+  // return (
+  //   <div>
+  //     <Dots active={active}/>
+  //   </div> 
+  //   )
+  // else  (
+  //   <div>
+  //     <Dots/>
+  //   </div> 
+  //   )
+  //  }
+  //  )
 };
 
 export default DotsList;

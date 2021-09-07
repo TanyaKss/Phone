@@ -24,7 +24,7 @@ const TodoGrid = ({todos, mini, rootElement}) => {
         return <TodoItem title={e.title} 
                          mini={mini}
                          key={i}
-                         hasClick={false}/>
+                         />
     })
 
 };
