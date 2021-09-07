@@ -2,15 +2,12 @@ import React from 'react';
 import Dots from './Dots';
 
 
-const DotsList = ({pageCount, pageIndex }) => { 
+const DotsList = ({pageCount, pageIndex, onPageChange }) => { 
 
 
 
     return pageCount.map((e, i) => {
-      if (pageIndex===e)
-        return <Dots active={true}/>
-      else
-        return <Dots/>
+        return <Dots active={pageIndex===e} onClick={() => onPageChange(e)}/>
     })
 };
 

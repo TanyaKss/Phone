@@ -7,12 +7,18 @@ const MainMenu = ({todos}) => {
 
   const ref = useRef()
 
+  //формирование массива уникальных страниц
   const pageCount = Array.from(todos.reduce ((acc, curr)=>{
     acc.add(curr.page)
     return acc;
   },new Set()))
 
-  const [pageIndex] = useState(1);
+  const [pageIndex, setPageIndex] = useState(1);
+
+  function onPageChange(i) {
+    setPageIndex(i)
+  }
+
 
   //формирование страницы относительно page
   const [currentList, setCurrentList] = useState([]);
@@ -22,12 +28,14 @@ const MainMenu = ({todos}) => {
     setCurrentList(todos.filter((e)=>e.page===pageIndex))
     
   }, [pageIndex, todos]);
+
+
  
-  return (
+  return (    
       <div className={styles.wrapper} ref={ref}>
-        <TodoGrid rootElement={ref} currentList={currentList}/>
+          <TodoGrid rootElement={ref} currentList={currentList}/>
         <div className = {styles.dotsList}>
-          <DotsList pageCount={pageCount} pageIndex={pageIndex} />
+          <DotsList pageCount={pageCount} pageIndex={pageIndex} onPageChange={onPageChange}/>
         </div>
       </div>
   );

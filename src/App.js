@@ -29,7 +29,7 @@ function App() {
   {title: 'Ц', page: 2},
   {title: 'Ч', page: 2},
   {title: 'Ш', page: 2},
-  {title: 'Щ', page: 2},
+  {title: 'Щ', children: [ {title: 'A'}, {title: 'B'}, {title: 'C'}, {title: 'D'}, {title: 'E'}, {title: 'F'}, {title: 'G'}, {title: 'H'}, {title: 'I'} ], page: 2},
   {title: 'Ъ', page: 2}]
 
 
