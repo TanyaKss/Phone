@@ -1,6 +1,5 @@
 import styles from  './App.module.css'
 import MainMenu from './Components/MainMenu';
-import Icons from './Components/Icons';
 
 
 function App() {
