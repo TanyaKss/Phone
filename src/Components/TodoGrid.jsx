@@ -25,6 +25,7 @@ const TodoGrid = ({mini, rootElement, currentList}) => {
         return <TodoItem title={e.title} 
                          mini={mini}
                          key={i}
+                         icon= {e.icon}
                          />
     })
 

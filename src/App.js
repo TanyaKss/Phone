@@ -1,36 +1,28 @@
 import styles from  './App.module.css'
 import MainMenu from './Components/MainMenu';
+import Icons from './Components/Icons';
 
 
 function App() {
-  const todos = [{title: 'A', page: 1},
-  {title: 'Б', page: 1},
-  {title: 'В', children: [{title: 'A'}, {title: 'B'}, {title: 'C'},  {title: 'D'}, {title: 'E'}, {title: 'F'}, {title: 'G'}, {title: 'H'}, {title: 'I'} ], page: 1}, 
-  {title: 'Г', page: 1},
-  {title: 'Д', page: 1},
-  {title: 'Е', page: 1},
-  {title: 'Ё', page: 1},
-  {title: 'Ж', page: 1},
-  {title: 'З', page: 1},
-  {title: 'И', page: 1},
-  {title: 'Й', page: 1},
-  {title: 'К', page: 1},
-  {title: 'Л', page: 2},
-  {title: 'М', page: 2},
-  {title: 'Н', page: 2},
-  {title: 'О', page: 2},
-  {title: 'П', page: 2},
-  {title: 'Р', page: 2},
-  {title: 'С', page: 2},
-  {title: 'Т', page: 2},
-  {title: 'У', page: 2},
-  {title: 'Ф', page: 2},
-  {title: 'Х', page: 2},
-  {title: 'Ц', page: 2},
-  {title: 'Ч', page: 2},
-  {title: 'Ш', page: 2},
-  {title: 'Щ', children: [ {title: 'A'}, {title: 'B'}, {title: 'C'}, {title: 'D'}, {title: 'E'}, {title: 'F'}, {title: 'G'}, {title: 'H'}, {title: 'I'} ], page: 2},
-  {title: 'Ъ', page: 2}]
+  const todos = [{title: 'Clips', page: 1 , icon:'clips'},
+  {title: 'Books', page: 1, icon: 'books'},
+  {title: 'Folder1', children: [{title: 'Home', icon: 'home'}, {title: 'Mail', icon: 'mail'}, {title: 'Translate', icon: 'translate'}], page: 1}, 
+  {title: 'Contacts', page: 1, icon: 'contacts'},
+  {title: 'Facetime', page: 1, icon: 'facetime'},
+  {title: 'Safari', page: 1, icon: 'safari'},
+  {title: 'Settings', page: 1, icon: 'settings'},
+  {title: 'Clock', page: 1, icon: 'clock'},
+  {title: 'Health', page: 1, icon: 'health'},
+  {title: 'Message', page: 1, icon: 'iosMessage'},
+  {title: 'Notes', page: 1, icon: 'notes'},
+  {title: 'Measure', page: 1, icon: 'measure'},
+  {title: 'Photo', page: 2, icon: 'photo'},
+  {title: 'Calculator', page: 2, icon: 'calculator'},
+  {title: 'Camera', page: 2, icon: 'camera'},
+  {title: 'Music', page: 2, icon: 'music'},
+  {title: 'Store', page: 2, icon: 'store'},
+  {title: 'Files', page: 2, icon: 'files'},
+  {title: 'Voice', page: 2, icon:'voice'}]
 
 
 

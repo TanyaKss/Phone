@@ -1,14 +1,16 @@
 import React from 'react';
 import styles from './TodoItem.module.css'
 import cn from 'classnames'
+import Icons from './Icons';
 
-const TodoItem = ({title, mini}) => {
+const TodoItem = ({title, mini, icon}) => {
    
   return (
-    <div  className={cn(styles.title, {[styles.miniTitle]: mini})}>
+    <div>
       <div className={cn(styles.item, {[styles.mini]: mini}, {[styles.shake]:!mini})}>
+      <Icons className={styles.icon} name= {icon}/>
       </div>
-        {title}
+        <div className={cn(styles.title)}>{!mini && title}</div>
     </div>
   
   )

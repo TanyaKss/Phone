@@ -31,6 +31,7 @@ const Folder = ({todos, modal, onClick, rootElement, title}) => {
               style={modal ? {marginLeft: ox + 'px', marginTop: oy + 'px'} : {}}
           >
             <TodoGrid currentList={todos} mini={!modal}/>
+            {modal && <div className={styles.anotation}>{title}</div>}
           </div>  
       </div>
       {!modal&&title}
